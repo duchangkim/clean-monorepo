@@ -14,4 +14,16 @@ container
   .bind<core.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase)
   .toConstantValue(counterFactory.getCreateCounterUsecase());
 
+container
+  .bind<core.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase)
+  .toConstantValue(counterFactory.getDeleteCounterUsecase());
+
+container
+  .bind<core.IncrementCounterUsecase>(COUNTER_IDENTIFIER.IncrementCounterUsecase)
+  .toConstantValue(counterFactory.getDecrementCounterUsecase());
+
+container
+  .bind<core.DecrementCounterUsecase>(COUNTER_IDENTIFIER.DecrementCounterUsecase)
+  .toConstantValue(counterFactory.getIncrementCounterUsecase());
+
 export default container;

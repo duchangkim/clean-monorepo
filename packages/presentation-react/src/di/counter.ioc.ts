@@ -20,10 +20,14 @@ container
 
 container
   .bind<core.IncrementCounterUsecase>(COUNTER_IDENTIFIER.IncrementCounterUsecase)
-  .toConstantValue(counterFactory.getDecrementCounterUsecase());
+  .toConstantValue(counterFactory.getIncrementCounterUsecase());
 
 container
   .bind<core.DecrementCounterUsecase>(COUNTER_IDENTIFIER.DecrementCounterUsecase)
-  .toConstantValue(counterFactory.getIncrementCounterUsecase());
+  .toConstantValue(counterFactory.getDecrementCounterUsecase());
+
+container
+  .bind<core.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase)
+  .toConstantValue(counterFactory.getGetAllCountersUsecase());
 
 export default container;

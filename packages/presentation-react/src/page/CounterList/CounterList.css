@@ -17,7 +17,7 @@
   border: 1px solid steelblue;
   border-radius: 4px;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 16px;
   padding: 16px
 }

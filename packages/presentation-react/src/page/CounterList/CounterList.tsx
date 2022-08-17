@@ -1,20 +1,25 @@
 import * as core from "core";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import { useInjection } from "inversify-react";
 import { COUNTER_IDENTIFIER } from "../../constant/counter/identifier";
 import { Counter } from "./Counter";
 
-import './CounterList.css';
+import "./CounterList.css";
 
 export function CounterList() {
     const [counterList, setCounterList] = useState<core.Counter[]>([]);
     const scrollBoxRef = useRef<HTMLDivElement>(null);
     const createCounterUseCase = useInjection<core.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase);
     const deleteCounterUseCase = useInjection<core.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase);
-    const incrementCounterUseCase = useInjection<core.IncrementCounterUsecase>(COUNTER_IDENTIFIER.IncrementCounterUsecase);
-    const decrementCounterUseCase = useInjection<core.DecrementCounterUsecase>(COUNTER_IDENTIFIER.DecrementCounterUsecase);
+    const incrementCounterUseCase = useInjection<core.IncrementCounterUsecase>(
+        COUNTER_IDENTIFIER.IncrementCounterUsecase
+    );
+    const decrementCounterUseCase = useInjection<core.DecrementCounterUsecase>(
+        COUNTER_IDENTIFIER.DecrementCounterUsecase
+    );
+    const getCounterListUseCase = useInjection<core.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase);
 
     const scrollCounterListToBottom = () => {
         setTimeout(() => {
@@ -30,10 +35,12 @@ export function CounterList() {
 
         console.log(newCounter);
         setCounterList([...counterList, newCounter]);
+
+        scrollCounterListToBottom();
     };
 
     const handleDeleteCounterButtonClick = (deletedCounterId: string) => {
-        const confirmsDeleteCounter = window.confirm('정말로 카운터를 삭제할까요?');
+        const confirmsDeleteCounter = window.confirm("정말로 카운터를 삭제할까요?");
 
         if (!confirmsDeleteCounter) return;
 
@@ -55,7 +62,7 @@ export function CounterList() {
 
         setCounterList(updatedCounterList);
     };
-    
+
     const handleIncrementButtonClick = (counter: core.Counter) => {
         incrementCounterUseCase.execute(counter);
 
@@ -70,9 +77,15 @@ export function CounterList() {
         setCounterList(updatedCounterList);
     };
 
+    const getCounterList = useCallback(() => {
+        const counterList = getCounterListUseCase.execute();
+
+        setCounterList(counterList);
+    }, [getCounterListUseCase]);
+
     useEffect(() => {
-        scrollCounterListToBottom();
-    }, [counterList.length]);
+        getCounterList();
+    }, [getCounterList]);
 
     return (
         <main className="counter-list-wrapper">

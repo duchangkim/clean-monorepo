@@ -4,7 +4,7 @@ import './index.css';
 import App from './page/App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'inversify-react';
-import container from './di/inversify.ioc';
+import container from './di/counter.ioc';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

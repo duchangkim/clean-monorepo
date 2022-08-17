@@ -19,6 +19,9 @@
         {
             "name": "presentation",
             "path": "packages/presentation"
+        },
+        {
+            "path": "packages/presentation-react"
         }
     ],
     "settings": {}

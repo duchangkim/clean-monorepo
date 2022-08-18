@@ -21,6 +21,7 @@
             "path": "packages/presentation"
         },
         {
+            "name": "presentation-react",
             "path": "packages/presentation-react"
         }
     ],

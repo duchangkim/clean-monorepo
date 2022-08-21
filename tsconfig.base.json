@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "removeComments": false,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es6",
+    "allowJs": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "locale": "ko",
+    "pretty": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "allowUnreachableCode": false,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strict": true,
+    "typeRoots": ["node_modules/@types"],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@peterpan/app/ng": ["app/presentation/src/main.ts"],
+      "@peterpan/app/react": ["app/presentation-react/src/index.tsx"],
+      "@peterpan/package/core": ["package/core/src/index.ts"],
+      "@peterpan/package/data": ["package/data/src/index.ts"],
+      "@peterpan/package/di": ["package/di/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build"]
+}

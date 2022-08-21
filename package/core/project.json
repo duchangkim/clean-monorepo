@@ -1,0 +1,5 @@
+{
+  "root": "package/core/",
+  "sourceRoot": "package/core/src",
+  "projectType": "library"
+}

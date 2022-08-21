@@ -1,15 +1,27 @@
 {
-    "name": "angular-clean-architecture",
-    "license": "ISC",
-    "scripts": {
-        "prestart": "npm install && lerna bootstrap",
-        "start": "lerna run start",
-        "test": "lerna run test",
-        "build": "lerna run build",
-        "graph": "nx graph"
-    },
-    "devDependencies": {
-        "lerna": "^5.1.8",
-        "nx": "^14.4.3"
-    }
+  "name": "peterpan",
+  "description": "두꺼비세상(피터팬의좋은방구하기) 모노레포",
+  "license": "ISC",
+  "author": "Duse",
+  "engines": {
+    "node": ">= 16.15.0"
+  },
+  "scripts": {
+    "prestart": "npm install && lerna bootstrap",
+    "start": "lerna run start",
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "@nrwl/eslint-plugin-nx": "^14.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "lerna": "^5.1.8",
+    "nx": "^14.4.3",
+    "prettier": "^2.7.1"
+  }
 }

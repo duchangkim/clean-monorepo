@@ -1,10 +1,5 @@
-# build
-**/node_modules
-**/build
-**/types
-
-# Dependency Cruiser Artifacts
-dependencygraph.svg
+# Created by https://www.toptal.com/developers/gitignore/api/react
+# Edit at https://www.toptal.com/developers/gitignore?templates=react
 
 # Logs
 logs
@@ -20,11 +15,15 @@ lerna-debug.log*
 
 .npmrc
 
+# build
+dist
+
 ### react ###
 .DS_*
 **/*.backup.*
 **/*.back.*
 
+node_modules/
 bower_components
 
 *.sublime*
@@ -34,5 +33,4 @@ psd
 thumb
 sketch
 
-# ESLint
-.eslintcache
+# End of https://www.toptal.com/developers/gitignore/api/react

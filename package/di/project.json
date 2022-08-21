@@ -1,0 +1,5 @@
+{
+  "root": "package/di/",
+  "sourceRoot": "package/di/src",
+  "projectType": "library"
+}

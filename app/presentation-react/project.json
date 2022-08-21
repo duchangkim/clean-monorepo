@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "app/presentation-react/",
+  "sourceRoot": "app/presentation-react/src",
+  "projectType": "application",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "fix": true,
+        "cache": true,
+        "eslintConfig": ".eslintrc.json",
+        "lintFilePatterns": [
+          "app/presentation-react/**/*.ts",
+          "app/presentation-react/**/*.tsx"
+        ]
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
-import * as core from "core";
-import { useInjection } from "inversify-react";
-import { useCallback, useState } from "react";
-import { COUNTER_IDENTIFIER } from "../../constant/counter/identifier";
+import * as core from 'core';
+import { useInjection } from 'inversify-react';
+import { useCallback, useState } from 'react';
+import { COUNTER_IDENTIFIER } from '../../constant/counter/identifier';
 
 export const useCounterList = function useCounterListCustomHook() {
   const [counterList, setCounterList] = useState<core.Counter[]>([]);
   const createCounterUseCase = useInjection<core.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase);
   const deleteCounterUseCase = useInjection<core.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase);
   const incrementCounterUseCase = useInjection<core.IncrementCounterUsecase>(
-    COUNTER_IDENTIFIER.IncrementCounterUsecase
+    COUNTER_IDENTIFIER.IncrementCounterUsecase,
   );
   const decrementCounterUseCase = useInjection<core.DecrementCounterUsecase>(
-    COUNTER_IDENTIFIER.DecrementCounterUsecase
+    COUNTER_IDENTIFIER.DecrementCounterUsecase,
   );
   const getCounterListUseCase = useInjection<core.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase);
 
@@ -32,9 +32,12 @@ export const useCounterList = function useCounterListCustomHook() {
     const updatedCounterList = counterList.map((counterItem) => {
       if (counterItem.id !== counter.id) return counterItem;
 
-      counterItem.currentCount = counterItem.currentCount - counterItem.incrementAmount;
+      const calculatedCount = counterItem.currentCount - counterItem.incrementAmount;
 
-      return counterItem;
+      return {
+        ...counterItem,
+        currentCount: calculatedCount,
+      };
     });
 
     setCounterList(updatedCounterList);
@@ -46,9 +49,12 @@ export const useCounterList = function useCounterListCustomHook() {
     const updatedCounterList = counterList.map((counterItem) => {
       if (counterItem.id !== counter.id) return counterItem;
 
-      counterItem.currentCount = counterItem.currentCount + counterItem.incrementAmount;
+      const calculatedCount = counterItem.currentCount + counterItem.incrementAmount;
 
-      return counterItem;
+      return {
+        ...counterItem,
+        currentCount: calculatedCount,
+      };
     });
 
     setCounterList(updatedCounterList);
@@ -60,7 +66,7 @@ export const useCounterList = function useCounterListCustomHook() {
 
       setCounterList(counterList);
     },
-    [getCounterListUseCase]
+    [getCounterListUseCase],
   );
 
   return {

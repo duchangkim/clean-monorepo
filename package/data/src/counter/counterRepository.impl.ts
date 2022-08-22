@@ -1,6 +1,6 @@
 import * as core from "core";
 
-import { LocalStorageService } from "../common/local-storage-service.interface";
+import { LocalStorageService } from "../common/localStorageService.interface";
 
 export class CounterRepositoryImpl implements core.CounterRepository {
     get counterIds(): string[] {

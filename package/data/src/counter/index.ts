@@ -1,1 +1,1 @@
-export * from './counter-repository.impl';
+export * from './counterRepository.impl';

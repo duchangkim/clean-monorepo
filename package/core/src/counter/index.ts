@@ -1,18 +1,27 @@
-export * from './entities/counter.entity';
+export * from './entity/counter.entity';
 
-export * from './usecases/create-counter';
-export * from './usecases/delete-counter';
+export * from './usecase/interface/createCounter';
+export * from './usecase/createCounter';
+export * from './usecase/interface/deleteCounter';
+export * from './usecase/deleteCounter';
 
-export * from './usecases/get-all-counters';
+export * from './usecase/interface/getAllCounters';
+export * from './usecase/getAllCounters';
 
-export * from './usecases/decrement-counter';
-export * from './usecases/increment-counter';
+export * from './usecase/interface/decrementCounter';
+export * from './usecase/decrementCounter';
+export * from './usecase/interface/incrementCounter';
+export * from './usecase/incrementCounter';
 
-export * from './usecases/update-decrement-amount';
-export * from './usecases/update-increment-amount';
+export * from './usecase/interface/updateDecrementAmount';
+export * from './usecase/updateDecrementAmount';
+export * from './usecase/interface/updateIncrementAmount';
+export * from './usecase/updateIncrementAmount';
 
-export * from './usecases/assign-counter-label';
+export * from './usecase/interface/assignCounterLabel';
+export * from './usecase/assignCounterLabel';
 
-export * from './usecases/filter-counters-by-label';
+export * from './usecase/interface/filterCountersByLabel';
+export * from './usecase/filterCountersByLabel';
 
-export * from './counter-repository.interface';
+export * from './counterRepository.interface';

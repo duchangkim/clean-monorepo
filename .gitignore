@@ -1,6 +1,7 @@
 # build
 **/node_modules
 **/build
+**/dist
 
 # Dependency Cruiser Artifacts
 dependencygraph.svg

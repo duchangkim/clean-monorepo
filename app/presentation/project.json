@@ -1,5 +1,6 @@
 {
-  "root": "package/presentation/",
-  "sourceRoot": "package/presentation/src",
-  "projectType": "library"
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "app/presentation/",
+  "sourceRoot": "app/presentation/src",
+  "projectType": "application"
 }

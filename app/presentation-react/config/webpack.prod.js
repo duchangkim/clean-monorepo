@@ -10,13 +10,14 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new webpack.BannerPlugin({
       banner: `Build Time: ${new Date().toLocaleString()} \n Build For: Production`,
     }),

@@ -5,12 +5,13 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": ["app/presentation-react/tsconfig.*?.json"]
+        "project": ["tsconfig.*?.json"]
       },
       "rules": {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "no-alert": "off"
       },
       "plugins": ["react", "react-hooks"],
       "extends": ["plugin:react/recommended", "plugin:react-hooks/recommended"]

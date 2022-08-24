@@ -1,5 +1,16 @@
 {
   "root": "package/core/",
   "sourceRoot": "package/core/src",
-  "projectType": "library"
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "fix": true,
+        "cache": true,
+        "eslintConfig": "package/core/.eslintrc.json",
+        "lintFilePatterns": ["package/core/**/*.ts"]
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 {
   "root": true,
+  "ignorePatterns": ["**/*"],
   "env": {
     "browser": true,
     "es2021": true
@@ -26,7 +27,7 @@
     "import/no-unresolved": ["off", { "caseSensitive": false }],
     "import/extensions": ["off", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }],
     "no-shadow": "off",
-    "prettier/prettier": "off"
+    "prettier/prettier": "error"
   },
   "overrides": [
     {

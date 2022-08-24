@@ -9,11 +9,8 @@
       "options": {
         "fix": true,
         "cache": true,
-        "eslintConfig": ".eslintrc.json",
-        "lintFilePatterns": [
-          "app/presentation-react/**/*.ts",
-          "app/presentation-react/**/*.tsx"
-        ]
+        "eslintConfig": "app/presentation-react/.eslintrc.json",
+        "lintFilePatterns": ["app/presentation-react/**/*.ts", "app/presentation-react/**/*.tsx"]
       }
     }
   }

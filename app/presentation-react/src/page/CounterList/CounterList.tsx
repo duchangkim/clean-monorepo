@@ -45,7 +45,9 @@ export function CounterList() {
 
   return (
     <main className="counter-list-wrapper">
-      <button onClick={handleCreateCounterButtonClick}>카운터 만들기</button>
+      <button type="button" onClick={handleCreateCounterButtonClick}>
+        카운터 만들기
+      </button>
       <div className="scroll-box" ref={scrollBoxRef}>
         {counterList.length > 0 ? (
           counterList.map((counter) => (

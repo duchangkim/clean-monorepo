@@ -8,4 +8,4 @@ export const COUNTER_IDENTIFIER = {
   UpdateIncrementAmountUsecase: Symbol.for('updateIncrementAmountUsecase'),
   UpdateDecrementAmountUsecase: Symbol.for('updateDecrementAmountUsecase'),
   AssignCounterLabelUsecase: Symbol.for('assignCounterLabelUsecase'),
-}
+};

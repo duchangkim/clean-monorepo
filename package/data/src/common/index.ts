@@ -1,1 +1,1 @@
-export * from "./localStorageService.interface";
+export * from './localStorageService.interface';

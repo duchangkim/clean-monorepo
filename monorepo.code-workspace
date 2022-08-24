@@ -1,29 +1,28 @@
 {
-    "folders": [
-        {
-            "name": "root",
-            "path": "."
-        },
-        {
-            "name": "core",
-            "path": "package/core"
-        },
-        {
-            "name": "data",
-            "path": "package/data"
-        },
-        {
-            "name": "di",
-            "path": "package/di"
-        },
-        {
-            "name": "presentation",
-            "path": "app/presentation"
-        },
-        {
-            "name": "presentation-react",
-            "path": "app/presentation-react"
-        }
-    ],
-    "settings": {}
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "core",
+      "path": "package/core"
+    },
+    {
+      "name": "data",
+      "path": "package/data"
+    },
+    {
+      "name": "di",
+      "path": "package/di"
+    },
+    {
+      "name": "presentation",
+      "path": "app/presentation"
+    },
+    {
+      "name": "presentation-react",
+      "path": "app/presentation-react"
+    }
+  ]
 }

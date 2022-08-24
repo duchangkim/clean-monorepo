@@ -7,7 +7,9 @@
     "build:watch": "nodemon -e ts --exec \"npm run build\" --ignore build/** --ignore tests/**",
     "rollup": "rollup -c",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "webpack:dev": "npm run tsc && webpack --mode development",
+    "tsc": "tsc --project tsconfig.build.json"
   },
   "author": "",
   "license": "ISC",

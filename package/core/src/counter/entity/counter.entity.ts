@@ -6,6 +6,6 @@ export interface Counter {
   currentCount: number;
 
   incrementAmount: number;
-  
+
   decrementAmount: number;
 }

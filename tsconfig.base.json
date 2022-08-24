@@ -22,10 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@peterpan/app/ng": ["app/presentation/src/main.ts"],
-      "@peterpan/app/react": ["app/presentation-react/src/index.tsx"],
-      "@peterpan/package/core": ["package/core/src/index.ts"],
-      "@peterpan/package/data": ["package/data/src/index.ts"],
-      "@peterpan/package/di": ["package/di/src/index.ts"]
+      "@peterpan/app/react": ["app/presentation-react/src/index.tsx"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

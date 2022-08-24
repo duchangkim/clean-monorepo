@@ -1,4 +1,4 @@
-import * as core from 'core';
+import * as core from '@peterpan/core';
 
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 

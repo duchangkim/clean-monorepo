@@ -1,6 +1,6 @@
 import { Container } from 'inversify';
-import * as core from 'core';
-import * as di from 'di';
+import * as core from '@peterpan/core';
+import * as di from '@peterpan/di';
 
 import { LocalStorageServiceImpl } from '../service/localStorageService';
 import { COUNTER_IDENTIFIER } from '../constant/counter/identifier';

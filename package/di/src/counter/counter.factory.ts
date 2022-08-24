@@ -1,5 +1,5 @@
-import * as core from 'core';
-import * as data from 'data';
+import * as core from '@peterpan/core';
+import * as data from '@peterpan/data';
 
 export class CounterFactory {
   private counterRepository: core.CounterRepository;

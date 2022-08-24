@@ -1,4 +1,4 @@
-import { Counter, CounterRepository } from 'core';
+import { Counter, CounterRepository } from '@peterpan/core';
 
 import { LocalStorageService } from '../../common';
 import { CounterRepositoryImpl } from '../../counter';

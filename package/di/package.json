@@ -1,5 +1,5 @@
 {
-    "name": "di",
+    "name": "@peterpan/di",
     "version": "1.0.0",
     "scripts": {
         "build": "tsc && npm run rollup",
@@ -8,8 +8,8 @@
     },
     "license": "ISC",
     "dependencies": {
-        "core": "*",
-        "data": "*"
+        "@peterpan/core": "*",
+        "@peterpan/data": "*"
     },
     "devDependencies": {
         "@rollup/plugin-typescript": "^8.3.3",

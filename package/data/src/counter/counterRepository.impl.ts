@@ -1,4 +1,4 @@
-import * as core from 'core';
+import * as core from '@peterpan/core';
 
 import { LocalStorageService } from '../common/localStorageService.interface';
 

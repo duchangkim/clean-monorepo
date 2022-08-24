@@ -1,5 +1,5 @@
-import * as core from 'core';
-import * as di from 'di';
+import * as core from '@peterpan/core';
+import * as di from '@peterpan/di';
 
 import { Provider } from '@angular/core';
 

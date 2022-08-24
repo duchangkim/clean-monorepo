@@ -1,4 +1,4 @@
-import * as core from 'core';
+import * as core from '@peterpan/core';
 
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 

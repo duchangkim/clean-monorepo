@@ -1,4 +1,4 @@
-import * as data from 'data';
+import * as data from '@peterpan/data';
 
 export * from './counter.factory';
 

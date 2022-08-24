@@ -1,4 +1,4 @@
-import * as di from 'di';
+import * as di from '@peterpan/di';
 
 export class LocalStorageServiceImpl implements di.LocalStorageService {
     get(key: string): string {

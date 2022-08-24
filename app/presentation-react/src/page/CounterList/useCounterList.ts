@@ -1,4 +1,4 @@
-import * as core from 'core';
+import * as core from '@peterpan/core';
 import { useInjection } from 'inversify-react';
 import { useCallback, useState } from 'react';
 import { COUNTER_IDENTIFIER } from '../../constant/counter/identifier';

@@ -1,5 +1,4 @@
 {
-  "root": "package/data/",
   "sourceRoot": "package/data/src",
   "projectType": "library",
   "prefix": "peterpan",

@@ -20,6 +20,7 @@
       "@peterpan/core": ["package/core/src/index.ts"],
       "@peterpan/data": ["package/data/src/index.ts"],
       "@peterpan/di": ["package/di/src/index.ts"],
+      "@peterpan/shared/asset/*": ["package/shared/asset/src/*"],
       // 각 프로젝트 src path alias
       "@core/*": ["package/core/src/*"],
       "@data/*": ["package/data/src/*"],

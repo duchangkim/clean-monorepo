@@ -27,8 +27,9 @@
     "import/prefer-default-export": "off",
     "import/no-unresolved": ["off", { "caseSensitive": false }],
     "import/extensions": ["off", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }],
+    "prettier/prettier": "error",
     "no-shadow": "off",
-    "prettier/prettier": "error"
+    "no-alert": "off"
   },
   "overrides": [
     {
@@ -69,7 +70,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-        "no-alert": "off"
+        "react/react-in-jsx-scope": "off"
       }
     },
     {

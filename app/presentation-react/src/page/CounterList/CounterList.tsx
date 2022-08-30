@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+import houseSample from '@peterpan/shared/asset/image/houseSample.jpg';
+
 import { Counter } from './Counter';
 import { useCounterList } from './useCounterList';
 
@@ -62,6 +64,9 @@ export function CounterList() {
         ) : (
           <div>아무것도 없음</div>
         )}
+      </div>
+      <div>
+        <img src={houseSample} alt="집 이미지" />
       </div>
     </main>
   );

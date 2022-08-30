@@ -5,6 +5,7 @@
     "core": "package/core",
     "data": "package/data",
     "di": "package/di",
+    "shared-asset": "package/shared/asset",
     "presentation": "app/presentation",
     "presentation-react": "app/presentation-react"
   }

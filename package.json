@@ -10,8 +10,9 @@
   "scripts": {
     "prestart": "npm install && npm run bootstrap",
     "start": "nx run-many --target=serve --configuration=dev",
-    "test": "lerna run test",
-    "build": "lerna run build",
+    "test": "nx run-many --target=test",
+    "build:dev": "nx run-many --target=build --configuration=dev",
+    "build:prod": "nx run-many --target=build --configuration=prod",
     "graph": "nx graph",
     "bootstrap": "lerna bootstrap"
   },
@@ -21,6 +22,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@nrwl/eslint-plugin-nx": "^14.5.10",
+    "@nrwl/jest": "14.5.10",
     "@nrwl/node": "^14.5.10",
     "@nrwl/react": "^14.5.10",
     "@nrwl/web": "^14.5.10",
@@ -30,6 +32,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/eslint": "^8.4.6",
     "@types/jest": "^28.1.8",
+    "@types/node": "16.11.7",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
@@ -46,7 +49,9 @@
     "nx": "^14.5.10",
     "prettier": "^2.7.1",
     "ts-jest": "^28.0.8",
-    "typescript": "^4.7.4"
+    "ts-node": "10.9.1",
+    "typescript": "^4.7.4",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
@@ -59,6 +64,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.3.0"
   }
 }

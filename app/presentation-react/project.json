@@ -1,6 +1,5 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "app/presentation-react/",
   "sourceRoot": "app/presentation-react/src",
   "projectType": "application",
   "targets": {
@@ -15,15 +14,13 @@
     },
     "build": {
       "executor": "@nrwl/web:webpack",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "index": "app/presentation-react/public/index.html",
         "main": "app/presentation-react/src/index.tsx",
         "tsConfig": "app/presentation-react/tsconfig.json",
         "outputPath": "app/presentation-react/dist",
-        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "webpackConfig": "app/presentation-react/config/webpack.config.js",
         "maxWorkers": 8,
         "scripts": [],
         "buildLibsFromSource": true,

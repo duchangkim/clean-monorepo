@@ -5,6 +5,10 @@
       "path": "."
     },
     {
+      "name": "shared/asset",
+      "path": "package/shared/asset"
+    },
+    {
       "name": "core",
       "path": "package/core"
     },

@@ -7,7 +7,8 @@ export class CounterRepositoryImpl implements core.CounterRepository {
     const counterIds = JSON.parse(this.localStorageService.get('counter-ids'));
 
     /** for app being used for first time */
-    // eslint-disable-next-line no-unused-expressions
+
+    // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     if (counterIds == null) [];
 
     return counterIds.ids;
@@ -19,7 +20,7 @@ export class CounterRepositoryImpl implements core.CounterRepository {
 
   constructor(private localStorageService: LocalStorageService) {
     try {
-      // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
       this.counterIds;
     } catch (e: unknown) {
       this.counterIds = [];

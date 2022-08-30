@@ -1,0 +1,15 @@
+{
+  "babelrcRoots": ["*"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "chrome": "58", "ie": "11" },
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-typescript"
+  ]
+}

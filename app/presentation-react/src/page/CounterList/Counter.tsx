@@ -1,4 +1,3 @@
-import React from 'react';
 import * as core from '@peterpan/core';
 
 import './Counter.css';

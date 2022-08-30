@@ -2,6 +2,7 @@
   "root": "package/di/",
   "sourceRoot": "package/di/src",
   "projectType": "library",
+  "prefix": "peterpan",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -12,5 +13,6 @@
         "lintFilePatterns": ["package/di/**/*.ts"]
       }
     }
-  }
+  },
+  "tags": ["core:di"]
 }

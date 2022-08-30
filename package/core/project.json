@@ -2,6 +2,7 @@
   "root": "package/core/",
   "sourceRoot": "package/core/src",
   "projectType": "library",
+  "prefix": "peterpan",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -12,5 +13,6 @@
         "lintFilePatterns": ["package/core/**/*.ts"]
       }
     }
-  }
+  },
+  "tags": ["core:core"]
 }

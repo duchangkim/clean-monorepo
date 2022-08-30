@@ -3,110 +3,110 @@ import * as core from '@peterpan/core';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-    selector: 'app-counter',
-    templateUrl: './counter.component.html',
-    styleUrls: ['./counter.component.scss'],
+  selector: 'app-counter',
+  templateUrl: './counter.component.html',
+  styleUrls: ['./counter.component.scss'],
 })
 export class CounterComponent {
-    @Input('data')
-    counter!: core.Counter;
+  @Input('data')
+  counter!: core.Counter;
 
-    @Output()
-    deleteClicked = new EventEmitter<string>();
+  @Output()
+  deleteClicked = new EventEmitter<string>();
 
-    editedCounter!: core.Counter;
+  editedCounter!: core.Counter;
 
-    isEditing = false;
+  isEditing = false;
 
-    constructor(
-        private incrementCounterUsecase: core.IncrementCounterUsecase,
-        private decrementCounterUsecase: core.DecrementCounterUsecase,
+  constructor(
+    private incrementCounterUsecase: core.IncrementCounterUsecase,
+    private decrementCounterUsecase: core.DecrementCounterUsecase,
 
-        private updateIncrementAmountUsecase: core.UpdateIncrementAmountUsecase,
-        private updateDecrementAmountUsecase: core.UpdateDecrementAmountUsecase,
+    private updateIncrementAmountUsecase: core.UpdateIncrementAmountUsecase,
+    private updateDecrementAmountUsecase: core.UpdateDecrementAmountUsecase,
 
-        private assignCounterLabelUsecase: core.AssignCounterLabelUsecase
-    ) {}
+    private assignCounterLabelUsecase: core.AssignCounterLabelUsecase,
+  ) {}
 
-    ngOnInit() {
-        this.editedCounter = this.getObjectCopy(this.counter);
+  ngOnInit() {
+    this.editedCounter = this.getObjectCopy(this.counter);
+  }
+
+  switchToEditMode() {
+    this.editedCounter = this.getObjectCopy(this.counter);
+
+    this.isEditing = true;
+  }
+
+  applyEdits() {
+    this.updateLabel();
+
+    this.updateIncrementAmount();
+
+    this.updateDecrementAmount();
+
+    this.isEditing = false;
+  }
+
+  incrementCounter() {
+    this.incrementCounterUsecase.execute(this.counter);
+
+    this.counter.currentCount += this.counter.incrementAmount;
+  }
+
+  decrementCounter() {
+    this.decrementCounterUsecase.execute(this.counter);
+
+    this.counter.currentCount -= this.counter.decrementAmount;
+  }
+
+  emitDeleteEvent() {
+    this.deleteClicked.emit(this.counter.id);
+  }
+
+  private updateLabel() {
+    try {
+      this.assignCounterLabelUsecase.execute({ ...this.counter, label: this.editedCounter.label });
+
+      this.counter.label = this.editedCounter.label;
+    } catch (error: unknown) {
+      alert('Could not update label. See console (F12) for details');
+
+      throw error;
     }
+  }
 
-    switchToEditMode() {
-        this.editedCounter = this.getObjectCopy(this.counter);
+  private updateIncrementAmount() {
+    try {
+      this.updateIncrementAmountUsecase.execute({
+        ...this.counter,
+        incrementAmount: this.editedCounter.incrementAmount,
+      });
 
-        this.isEditing = true;
+      this.counter.incrementAmount = this.editedCounter.incrementAmount;
+    } catch (error: unknown) {
+      alert('Could not update Increment Amount. See console (F12) for details');
+
+      throw error;
     }
+  }
 
-    applyEdits() {
-        this.updateLabel();
+  private updateDecrementAmount() {
+    try {
+      this.updateDecrementAmountUsecase.execute({
+        ...this.counter,
+        decrementAmount: this.editedCounter.decrementAmount,
+      });
 
-        this.updateIncrementAmount();
+      this.counter.decrementAmount = this.editedCounter.decrementAmount;
+    } catch (error: unknown) {
+      alert('Could not update Decrement Amount. See console (F12) for details');
 
-        this.updateDecrementAmount();
-
-        this.isEditing = false;
+      throw error;
     }
+  }
 
-    incrementCounter() {
-        this.incrementCounterUsecase.execute(this.counter);
-
-        this.counter.currentCount += this.counter.incrementAmount;
-    }
-
-    decrementCounter() {
-        this.decrementCounterUsecase.execute(this.counter);
-
-        this.counter.currentCount -= this.counter.decrementAmount;
-    }
-
-    emitDeleteEvent() {
-        this.deleteClicked.emit(this.counter.id);
-    }
-
-    private updateLabel() {
-        try {
-            this.assignCounterLabelUsecase.execute({ ...this.counter, label: this.editedCounter.label });
-
-            this.counter.label = this.editedCounter.label;
-        } catch (error: unknown) {
-            alert('Could not update label. See console (F12) for details');
-
-            throw error;
-        }
-    }
-
-    private updateIncrementAmount() {
-        try {
-            this.updateIncrementAmountUsecase.execute({
-                ...this.counter,
-                incrementAmount: this.editedCounter.incrementAmount,
-            });
-
-            this.counter.incrementAmount = this.editedCounter.incrementAmount;
-        } catch (error: unknown) {
-            alert('Could not update Increment Amount. See console (F12) for details');
-
-            throw error;
-        }
-    }
-
-    private updateDecrementAmount() {
-        try {
-            this.updateDecrementAmountUsecase.execute({
-                ...this.counter,
-                decrementAmount: this.editedCounter.decrementAmount,
-            });
-
-            this.counter.decrementAmount = this.editedCounter.decrementAmount;
-        } catch (error: unknown) {
-            alert('Could not update Decrement Amount. See console (F12) for details');
-
-            throw error;
-        }
-    }
-
-    private getObjectCopy(obj: any): any {
-        return JSON.parse(JSON.stringify(obj));
-    }
+  private getObjectCopy(obj: any): any {
+    return JSON.parse(JSON.stringify(obj));
+  }
 }

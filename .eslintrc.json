@@ -11,14 +11,15 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@nrwl/nx/react"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "@nrwl/nx"],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
     "class-methods-use-this": "off",
@@ -31,9 +32,45 @@
   },
   "overrides": [
     {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "core:core",
+                "onlyDependOnLibsWithTags": ["core:core"]
+              },
+              {
+                "sourceTag": "core:data",
+                "onlyDependOnLibsWithTags": ["core:core", "core:data"]
+              },
+              {
+                "sourceTag": "core:di",
+                "onlyDependOnLibsWithTags": ["core:core", "core:data", "core:di"]
+              },
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ],
+            "allowCircularSelfDependency": true
+          }
+        ]
+      }
+    },
+    {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "extends": ["plugin:@nrwl/nx/typescript", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+      "plugins": ["react", "react-hooks"],
+      "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "no-alert": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

@@ -1,136 +1,136 @@
 .counter {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 6px;
+
+  padding: 1rem;
+
+  background-color: rgb(247, 247, 247);
+
+  box-shadow: 4px 4px 10px 0px rgba(227, 227, 227, 0.75);
+
+  .counter-label {
     width: 100%;
-    box-sizing: border-box;
 
-    border: 1px solid rgb(201, 201, 201);
-    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
 
-    padding: 1rem;
+    justify-content: space-between;
 
-    background-color: rgb(247, 247, 247);
+    font-size: 1.15rem;
+    font-weight: bold;
 
-    box-shadow: 4px 4px 10px 0px rgba(227, 227, 227, 0.75);
+    button {
+      background-color: none;
+      border: none;
+      background: none;
 
-    .counter-label {
-        width: 100%;
+      transform: scale(1.7);
 
-        display: flex;
-        flex-direction: row;
+      cursor: pointer;
 
-        justify-content: space-between;
-
-        font-size: 1.15rem;
-        font-weight: bold;
-
-        button {
-            background-color: none;
-            border: none;
-            background: none;
-
-            transform: scale(1.7);
-
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.8);
-            }
-        }
-
-        input {
-            padding: 0.5rem;
-
-            border: 1px solid rgb(146, 146, 146);
-            border-radius: 3px;
-        }
+      &:hover {
+        transform: scale(1.8);
+      }
     }
 
-    .counter-amount {
-        margin-top: 1rem;
+    input {
+      padding: 0.5rem;
 
-        font-size: 2rem;
+      border: 1px solid rgb(146, 146, 146);
+      border-radius: 3px;
     }
+  }
 
-    .counter-body {
-        width: 100%;
+  .counter-amount {
+    margin-top: 1rem;
 
-        display: flex;
-        flex-direction: row;
+    font-size: 2rem;
+  }
 
-        align-items: center;
-        justify-content: space-between;
+  .counter-body {
+    width: 100%;
 
-        gap: 1rem;
-    }
+    display: flex;
+    flex-direction: row;
 
-    .counter-button {
-        display: flex;
-        flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-        align-items: center;
+    gap: 1rem;
+  }
 
-        gap: 0.3rem;
+  .counter-button {
+    display: flex;
+    flex-direction: column;
 
-        & > button {
-            width: 100%;
+    align-items: center;
 
-            background: none;
-            border: none;
-            border-radius: 6px;
+    gap: 0.3rem;
 
-            padding: 0.6rem;
+    & > button {
+      width: 100%;
 
-            color: white;
+      background: none;
+      border: none;
+      border-radius: 6px;
 
-            transition: 150ms transform, 100ms background-color;
+      padding: 0.6rem;
 
-            cursor: pointer;
+      color: white;
 
-            &.decrement {
-                background-color: rgb(221, 70, 16);
+      transition: 150ms transform, 100ms background-color;
 
-                &:hover:not([disabled]) {
-                    background-color: rgb(255, 104, 49);
-                }
+      cursor: pointer;
 
-                &:active:not([disabled]) {
-                    background-color: rgb(255, 126, 79);
-                }
+      &.decrement {
+        background-color: rgb(221, 70, 16);
 
-                &:disabled {
-                    background-color: rgb(182, 121, 99);
-                }
-            }
-
-            &.increment {
-                background-color: rgb(16, 129, 221);
-
-                &:hover:not([disabled]) {
-                    background-color: rgb(59, 161, 244);
-                }
-
-                &:active:not([disabled]) {
-                    background-color: rgb(88, 180, 255);
-                }
-
-                &:disabled {
-                    background-color: rgb(147, 172, 192);
-                }
-            }
-
-            &:hover:not([disabled]) {
-                transform: scale(1.05);
-            }
+        &:hover:not([disabled]) {
+          background-color: rgb(255, 104, 49);
         }
 
-        & > input {
-            width: 90%;
-
-            border-radius: 6px;
-            border: 1px solid rgb(147, 147, 147);
-
-            padding: 0.3rem;
-
-            text-align: center;
+        &:active:not([disabled]) {
+          background-color: rgb(255, 126, 79);
         }
+
+        &:disabled {
+          background-color: rgb(182, 121, 99);
+        }
+      }
+
+      &.increment {
+        background-color: rgb(16, 129, 221);
+
+        &:hover:not([disabled]) {
+          background-color: rgb(59, 161, 244);
+        }
+
+        &:active:not([disabled]) {
+          background-color: rgb(88, 180, 255);
+        }
+
+        &:disabled {
+          background-color: rgb(147, 172, 192);
+        }
+      }
+
+      &:hover:not([disabled]) {
+        transform: scale(1.05);
+      }
     }
+
+    & > input {
+      width: 90%;
+
+      border-radius: 6px;
+      border: 1px solid rgb(147, 147, 147);
+
+      padding: 0.3rem;
+
+      text-align: center;
+    }
+  }
 }

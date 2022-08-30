@@ -12,6 +12,63 @@
         "eslintConfig": "app/presentation-react/.eslintrc.json",
         "lintFilePatterns": ["app/presentation-react/**/*.ts", "app/presentation-react/**/*.tsx"]
       }
+    },
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "index": "app/presentation-react/public/index.html",
+        "main": "app/presentation-react/src/index.tsx",
+        "tsConfig": "app/presentation-react/tsconfig.json",
+        "outputPath": "app/presentation-react/dist",
+        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "maxWorkers": 8,
+        "scripts": [],
+        "buildLibsFromSource": true,
+        "assets": [
+          {
+            "input": "app/presentation-react/public/static",
+            "glob": "**/*",
+            "output": "static"
+          }
+        ]
+      },
+      "configurations": {
+        "prod": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        },
+        "dev": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "presentation-react:build",
+        "hmr": true,
+        "port": 3000
+      },
+      "configurations": {
+        "prod": {
+          "buildTarget": "presentation-react:build:prod"
+        },
+        "dev": {
+          "buildTarget": "presentation-react:build:dev"
+        }
+      },
+      "defaultConfiguration": "development"
     }
   }
 }

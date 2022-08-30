@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '@/asset/image/favicon.png';
+import logo from '@reactExample/asset/image/favicon.png';
 
 export function Start() {
   return (

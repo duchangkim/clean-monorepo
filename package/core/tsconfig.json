@@ -3,8 +3,6 @@
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
     "outDir": "build/",
     "declaration": true,
     "declarationMap": true,

@@ -47,10 +47,16 @@ export function CounterList() {
 
   return (
     <main className="counter-list-wrapper">
-      <button type="button" onClick={handleCreateCounterButtonClick}>
+      <button
+        type="button"
+        onClick={handleCreateCounterButtonClick}
+      >
         카운터 만들기
       </button>
-      <div className="scroll-box" ref={scrollBoxRef}>
+      <div
+        className="scroll-box"
+        ref={scrollBoxRef}
+      >
         {counterList.length > 0 ? (
           counterList.map((counter) => (
             <Counter
@@ -66,7 +72,10 @@ export function CounterList() {
         )}
       </div>
       <div>
-        <img src={houseSample} alt="집 이미지" />
+        <img
+          src={houseSample}
+          alt="집 이미지"
+        />
       </div>
     </main>
   );

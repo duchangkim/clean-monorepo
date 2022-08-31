@@ -8,6 +8,7 @@
     "node": ">= 16.15.0"
   },
   "scripts": {
+    "lint": "nx run-many --target=lint",
     "prestart": "npm install && npm run bootstrap",
     "start": "nx run-many --target=serve --configuration=dev",
     "test": "nx run-many --target=test",

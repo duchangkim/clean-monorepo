@@ -22,9 +22,15 @@ export const Counter = function CounterFuntionComponent({
           {counter.label} / ID: {counter.id}
         </div>
         <div className="button-box">
-          <button type="button">🔧</button>
+          <button type="button">
+            <span role="img" aria-label="스패너 이모지">
+              🔧
+            </span>
+          </button>
           <button type="button" onClick={handleDeleteCounterButtonClick}>
-            ❌
+            <span role="img" aria-label="X표시 이모지">
+              ❌
+            </span>
           </button>
         </div>
       </div>

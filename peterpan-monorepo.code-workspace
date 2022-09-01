@@ -26,7 +26,7 @@
     }
   ],
   "settings": {
-    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "project-relative",
     "typescript.preferences.quoteStyle": "single",
   }
 }

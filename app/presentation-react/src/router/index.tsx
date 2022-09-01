@@ -1,6 +1,6 @@
 import { Routes as ReactRouterRoutes, Route, Navigate } from 'react-router-dom';
-import { CounterList } from '@reactExample/page/CounterList';
-import { Start } from '@reactExample/page/Start';
+import { CounterList } from '../page/CounterList';
+import { Start } from '../page/Start';
 
 function Routes() {
   return (

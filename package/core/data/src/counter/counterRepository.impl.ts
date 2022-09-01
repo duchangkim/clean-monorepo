@@ -1,5 +1,4 @@
 import { Counter, CounterRepository } from '@peterpan/domain';
-
 import { LocalStorageService } from '../common/localStorageService.interface';
 
 export class CounterRepositoryImpl implements CounterRepository {

@@ -1,5 +1,5 @@
 {
-  "sourceRoot": "package/data/src",
+  "sourceRoot": "package/core/data/src",
   "projectType": "library",
   "prefix": "peterpan",
   "targets": {
@@ -8,8 +8,8 @@
       "options": {
         "fix": true,
         "cache": true,
-        "eslintConfig": "package/data/.eslintrc.json",
-        "lintFilePatterns": ["package/data/**/*.ts"]
+        "eslintConfig": "package/core/data/.eslintrc.json",
+        "lintFilePatterns": ["package/core/data/**/*.ts"]
       }
     }
   },

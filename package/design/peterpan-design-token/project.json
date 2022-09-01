@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "package/design/peterpan-design-token/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/package/design/peterpan-design-token",
+        "main": "package/design/peterpan-design-token/src/index.ts",
+        "tsConfig": "package/design/peterpan-design-token/tsconfig.lib.json",
+        "assets": [
+          "package/design/peterpan-design-token/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "package/design/peterpan-design-token/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/package/design/peterpan-design-token"
+      ],
+      "options": {
+        "jestConfig": "package/design/peterpan-design-token/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

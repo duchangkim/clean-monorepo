@@ -1,3 +1,6 @@
+import { useInjection } from 'inversify-react';
+import { useCallback, useState } from 'react';
+
 import {
   Counter,
   CreateCounterUsecase,
@@ -6,9 +9,8 @@ import {
   GetAllCountersUsecase,
   IncrementCounterUsecase,
 } from '@peterpan/domain';
-import { COUNTER_IDENTIFIER } from '@reactExample/constant/counter/identifier';
-import { useInjection } from 'inversify-react';
-import { useCallback, useState } from 'react';
+
+import { COUNTER_IDENTIFIER } from '../../constant/counter/identifier';
 
 export const useCounterList = function useCounterListCustomHook() {
   const [counterList, setCounterList] = useState<Counter[]>([]);

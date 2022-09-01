@@ -6,6 +6,8 @@
     "di": "package/core/di",
     "domain": "package/core/domain",
     "presentation-react": "app/presentation-react",
-    "shared-asset": "package/shared/asset"
+    "shared-asset": "package/shared/asset",
+    "design-peterpan-design-token": "package/design/peterpan-design-token",
+    "design-peterpan-design-system": "package/design/peterpan-design-system"
   }
 }

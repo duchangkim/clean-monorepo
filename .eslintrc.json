@@ -38,26 +38,24 @@
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
-            "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "core:core",
-                "onlyDependOnLibsWithTags": ["core:core"]
+                "sourceTag": "core:domain",
+                "onlyDependOnLibsWithTags": ["core:domain"]
               },
               {
                 "sourceTag": "core:data",
-                "onlyDependOnLibsWithTags": ["core:core", "core:data"]
+                "onlyDependOnLibsWithTags": ["core:domain", "core:data"]
               },
               {
                 "sourceTag": "core:di",
-                "onlyDependOnLibsWithTags": ["core:core", "core:data", "core:di"]
+                "onlyDependOnLibsWithTags": ["core:domain", "core:data", "core:di"]
               },
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
               }
-            ],
-            "allowCircularSelfDependency": true
+            ]
           }
         ]
       }

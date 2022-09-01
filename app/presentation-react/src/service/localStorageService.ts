@@ -1,4 +1,4 @@
-import { LocalStorageService } from '@peterpan/di';
+import { LocalStorageService } from '@peterpan/shared-core-di';
 
 export class LocalStorageServiceImpl implements LocalStorageService {
   get(key: string): string {

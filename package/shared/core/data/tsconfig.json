@@ -1,5 +1,5 @@
 {
-  "extends": "../../../tsconfig.base.json",
+  "extends": "../../../../tsconfig.base.json",
 
   "include": ["src/**/*.ts"],
 
@@ -15,6 +15,6 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["node_modules/@types"]
   }
 }

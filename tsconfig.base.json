@@ -10,41 +10,20 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@peterpan/data": [
-        "package/core/data/src/index.ts"
-      ],
-      "@peterpan/di": [
-        "package/core/di/src/index.ts"
-      ],
-      "@peterpan/domain": [
-        "package/core/domain/src/index.ts"
-      ],
-      "@peterpan/shared/asset/*": [
-        "package/shared/asset/src/*"
-      ],
-      "@peterpan/designToken": [
-        "package/design/peterpan-design-token/src/index.ts"
-      ],
-      "@peterpan/designSystem": [
-        "package/design/peterpan-design-system/src/index.ts"
-      ]
+      "@peterpan/designSystem": ["package/design/peterpan-design-system/src/index.ts"],
+      "@peterpan/designToken": ["package/design/peterpan-design-token/src/index.ts"],
+      "@peterpan/shared-core-data": ["package/shared/core/data/src/index.ts"],
+      "@peterpan/shared-core-di": ["package/shared/core/di/src/index.ts"],
+      "@peterpan/shared-core-domain": ["package/shared/core/domain/src/index.ts"],
+      "@peterpan/shared/asset/*": ["package/shared/asset/src/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build"
-  ]
+  "exclude": ["node_modules", "dist", "build"]
 }

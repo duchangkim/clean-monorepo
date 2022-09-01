@@ -8,7 +8,7 @@ import {
   DeleteCounterUsecase,
   GetAllCountersUsecase,
   IncrementCounterUsecase,
-} from '@peterpan/domain';
+} from '@peterpan/shared-core-domain';
 
 import { COUNTER_IDENTIFIER } from '../../constant/counter/identifier';
 

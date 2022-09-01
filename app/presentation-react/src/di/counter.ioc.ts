@@ -5,8 +5,8 @@ import {
   DeleteCounterUsecase,
   GetAllCountersUsecase,
   IncrementCounterUsecase,
-} from '@peterpan/domain';
-import * as di from '@peterpan/di';
+} from '@peterpan/shared-core-domain';
+import * as di from '@peterpan/shared-core-di';
 
 import { LocalStorageServiceImpl } from '../service/localStorageService';
 import { COUNTER_IDENTIFIER } from '../constant/counter/identifier';

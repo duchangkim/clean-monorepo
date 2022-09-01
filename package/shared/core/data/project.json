@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "package/shared/core/data/src",
+  "projectType": "library",
+  "prefix": "peterpan",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "fix": true,
+        "cache": true,
+        "eslintConfig": "package/shared/core/data/.eslintrc.json",
+        "lintFilePatterns": ["package/shared/core/data/**/*.ts"]
+      }
+    }
+  },
+  "tags": ["core:data"]
+}

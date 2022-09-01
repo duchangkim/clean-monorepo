@@ -9,16 +9,16 @@
       "path": "package/shared/asset"
     },
     {
-      "name": "core/domain",
-      "path": "package/core/domain"
+      "name": "shared/core/domain",
+      "path": "package/shared/core/domain"
     },
     {
-      "name": "core/data",
-      "path": "package/core/data"
+      "name": "shared/core/data",
+      "path": "package/shared/core/data"
     },
     {
-      "name": "core/di",
-      "path": "package/core/di"
+      "name": "shared/core/di",
+      "path": "package/shared/core/di"
     },
     {
       "name": "app/reactExample",

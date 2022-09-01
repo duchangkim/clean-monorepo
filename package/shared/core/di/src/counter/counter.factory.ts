@@ -1,4 +1,4 @@
-import { CounterRepositoryImpl, LocalStorageService } from '@peterpan/data';
+import { CounterRepositoryImpl, LocalStorageService } from '@peterpan/shared-core-data';
 import {
   AssignCounterLabelUsecase,
   AssignCounterLabelUsecaseImpl,
@@ -19,7 +19,7 @@ import {
   UpdateDecrementAmountUsecaseImpl,
   UpdateIncrementAmountUsecase,
   UpdateIncrementAmountUsecaseImpl,
-} from '@peterpan/domain';
+} from '@peterpan/shared-core-domain';
 
 export class CounterFactory {
   private counterRepository: CounterRepository;

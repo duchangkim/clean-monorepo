@@ -1,4 +1,4 @@
-import { Counter } from '@peterpan/domain';
+import { Counter } from '@peterpan/shared-core-domain';
 
 import './Counter.css';
 

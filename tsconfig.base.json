@@ -17,14 +17,13 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@peterpan/core": ["package/core/src/index.ts"],
-      "@peterpan/data": ["package/data/src/index.ts"],
-      "@peterpan/di": ["package/di/src/index.ts"],
+      "@data/*": ["package/core/data/src/*"],
+      "@di/*": ["package/core/di/src/*"],
+      "@domain/*": ["package/core/domain/src/*"],
+      "@peterpan/data": ["package/core/data/src/index.ts"],
+      "@peterpan/di": ["package/core/di/src/index.ts"],
+      "@peterpan/domain": ["package/core/domain/src/index.ts"],
       "@peterpan/shared/asset/*": ["package/shared/asset/src/*"],
-      // 각 프로젝트 src path alias
-      "@core/*": ["package/core/src/*"],
-      "@data/*": ["package/data/src/*"],
-      "@di/*": ["package/di/src/*"],
       "@reactExample/*": ["app/presentation-react/src/*"]
     }
   },

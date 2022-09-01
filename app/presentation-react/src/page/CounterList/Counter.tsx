@@ -1,9 +1,9 @@
-import * as core from '@peterpan/core';
+import { counter } from '@peterpan/domain';
 
 import './Counter.css';
 
 export interface CounterProps {
-  counter: core.Counter;
+  counter: counter.Counter;
   handleDecrementButtonClick: () => void;
   handleIncrementButtonClick: () => void;
   handleDeleteCounterButtonClick: () => void;

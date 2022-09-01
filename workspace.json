@@ -2,11 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "core": "package/core",
-    "data": "package/data",
-    "di": "package/di",
-    "shared-asset": "package/shared/asset",
-    "presentation": "app/presentation",
-    "presentation-react": "app/presentation-react"
+    "data": "package/core/data",
+    "di": "package/core/di",
+    "domain": "package/core/domain",
+    "presentation-react": "app/presentation-react",
+    "shared-asset": "package/shared/asset"
   }
 }

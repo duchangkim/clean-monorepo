@@ -1,5 +1,4 @@
 {
-  "root": "package/shared/asset",
   "sourceRoot": "package/shared/asset/src",
   "projectType": "library",
   "tags": []

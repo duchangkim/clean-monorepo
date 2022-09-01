@@ -1,5 +1,5 @@
 import { Container } from 'inversify';
-import * as core from '@peterpan/core';
+import { counter } from '@peterpan/domain';
 import * as di from '@peterpan/di';
 
 import { LocalStorageServiceImpl } from '../service/localStorageService';
@@ -11,23 +11,23 @@ const counterFactory = new di.CounterFactory(localStorageServiceImpl);
 const container = new Container();
 
 container
-  .bind<core.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase)
+  .bind<counter.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase)
   .toConstantValue(counterFactory.getCreateCounterUsecase());
 
 container
-  .bind<core.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase)
+  .bind<counter.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase)
   .toConstantValue(counterFactory.getDeleteCounterUsecase());
 
 container
-  .bind<core.IncrementCounterUsecase>(COUNTER_IDENTIFIER.IncrementCounterUsecase)
+  .bind<counter.IncrementCounterUsecase>(COUNTER_IDENTIFIER.IncrementCounterUsecase)
   .toConstantValue(counterFactory.getIncrementCounterUsecase());
 
 container
-  .bind<core.DecrementCounterUsecase>(COUNTER_IDENTIFIER.DecrementCounterUsecase)
+  .bind<counter.DecrementCounterUsecase>(COUNTER_IDENTIFIER.DecrementCounterUsecase)
   .toConstantValue(counterFactory.getDecrementCounterUsecase());
 
 container
-  .bind<core.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase)
+  .bind<counter.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase)
   .toConstantValue(counterFactory.getGetAllCountersUsecase());
 
 export default container;

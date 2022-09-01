@@ -1,19 +1,19 @@
-import * as core from '@peterpan/core';
+import { counter } from '@peterpan/domain';
 import { COUNTER_IDENTIFIER } from '@reactExample/constant/counter/identifier';
 import { useInjection } from 'inversify-react';
 import { useCallback, useState } from 'react';
 
 export const useCounterList = function useCounterListCustomHook() {
-  const [counterList, setCounterList] = useState<core.Counter[]>([]);
-  const createCounterUseCase = useInjection<core.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase);
-  const deleteCounterUseCase = useInjection<core.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase);
-  const incrementCounterUseCase = useInjection<core.IncrementCounterUsecase>(
+  const [counterList, setCounterList] = useState<counter.Counter[]>([]);
+  const createCounterUseCase = useInjection<counter.CreateCounterUsecase>(COUNTER_IDENTIFIER.CreateCounterUsecase);
+  const deleteCounterUseCase = useInjection<counter.DeleteCounterUsecase>(COUNTER_IDENTIFIER.DeleteCounterUsecase);
+  const incrementCounterUseCase = useInjection<counter.IncrementCounterUsecase>(
     COUNTER_IDENTIFIER.IncrementCounterUsecase,
   );
-  const decrementCounterUseCase = useInjection<core.DecrementCounterUsecase>(
+  const decrementCounterUseCase = useInjection<counter.DecrementCounterUsecase>(
     COUNTER_IDENTIFIER.DecrementCounterUsecase,
   );
-  const getCounterListUseCase = useInjection<core.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase);
+  const getCounterListUseCase = useInjection<counter.GetAllCountersUsecase>(COUNTER_IDENTIFIER.GetAllCountersUsecase);
 
   const handleCreateCounter = function excuteCreateCounterUseCase() {
     const newCounter = createCounterUseCase.execute();
@@ -26,7 +26,7 @@ export const useCounterList = function useCounterListCustomHook() {
     setCounterList(counterList.filter((counter) => counter.id !== deletedCounterId));
   };
 
-  const handleDecrementCounter = function excuteDecrementCounterUseCase(counter: core.Counter) {
+  const handleDecrementCounter = function excuteDecrementCounterUseCase(counter: counter.Counter) {
     decrementCounterUseCase.execute(counter);
 
     const updatedCounterList = counterList.map((counterItem) => {
@@ -43,7 +43,7 @@ export const useCounterList = function useCounterListCustomHook() {
     setCounterList(updatedCounterList);
   };
 
-  const handleIncrementCounter = function excuteIncrementCounterUseCase(counter: core.Counter) {
+  const handleIncrementCounter = function excuteIncrementCounterUseCase(counter: counter.Counter) {
     incrementCounterUseCase.execute(counter);
 
     const updatedCounterList = counterList.map((counterItem) => {

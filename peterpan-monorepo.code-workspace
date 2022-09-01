@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "shared/asset",
+      "path": "package/shared/asset"
+    },
+    {
+      "name": "domain",
+      "path": "package/core/domain"
+    },
+    {
+      "name": "data",
+      "path": "package/core/data"
+    },
+    {
+      "name": "di",
+      "path": "package/core/di"
+    },
+    {
+      "name": "presentation-react",
+      "path": "app/presentation-react"
+    }
+  ]
+}

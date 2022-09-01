@@ -9,20 +9,24 @@
       "path": "package/shared/asset"
     },
     {
-      "name": "domain",
+      "name": "core/domain",
       "path": "package/core/domain"
     },
     {
-      "name": "data",
+      "name": "core/data",
       "path": "package/core/data"
     },
     {
-      "name": "di",
+      "name": "core/di",
       "path": "package/core/di"
     },
     {
-      "name": "presentation-react",
+      "name": "app/reactExample",
       "path": "app/presentation-react"
     }
-  ]
+  ],
+  "settings": {
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.quoteStyle": "single",
+  }
 }

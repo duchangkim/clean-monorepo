@@ -17,9 +17,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@data/*": ["package/core/data/src/*"],
-      "@di/*": ["package/core/di/src/*"],
-      "@domain/*": ["package/core/domain/src/*"],
+      // "@data/*": ["package/core/data/src/*"],
+      // "@di/*": ["package/core/di/src/*"],
+      // "@domain/*": ["package/core/domain/src/*"],
       "@peterpan/data": ["package/core/data/src/index.ts"],
       "@peterpan/di": ["package/core/di/src/index.ts"],
       "@peterpan/domain": ["package/core/domain/src/index.ts"],

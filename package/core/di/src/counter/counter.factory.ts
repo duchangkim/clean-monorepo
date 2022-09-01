@@ -1,46 +1,66 @@
-import { counter } from '@peterpan/domain';
-import * as data from '@peterpan/data';
+import { CounterRepositoryImpl, LocalStorageService } from '@peterpan/data';
+import {
+  AssignCounterLabelUsecase,
+  AssignCounterLabelUsecaseImpl,
+  CounterRepository,
+  CreateCounterUsecase,
+  CreateCounterUsecaseImpl,
+  DecrementCounterUsecase,
+  DecrementCounterUsecaseImpl,
+  DeleteCounterUsecase,
+  DeleteCounterUsecaseImpl,
+  FilterCountersByLabelUsecase,
+  FilterCountersByLabelUsecaseImpl,
+  GetAllCountersUsecase,
+  GetAllCountersUsecaseImpl,
+  IncrementCounterUsecase,
+  IncrementCounterUsecaseImpl,
+  UpdateDecrementAmountUsecase,
+  UpdateDecrementAmountUsecaseImpl,
+  UpdateIncrementAmountUsecase,
+  UpdateIncrementAmountUsecaseImpl,
+} from '@peterpan/domain';
 
 export class CounterFactory {
-  private counterRepository: counter.CounterRepository;
+  private counterRepository: CounterRepository;
 
-  constructor(private localStorageService: data.LocalStorageService) {
-    this.counterRepository = new data.CounterRepositoryImpl(this.localStorageService);
+  constructor(private localStorageService: LocalStorageService) {
+    this.counterRepository = new CounterRepositoryImpl(this.localStorageService);
   }
 
-  getCreateCounterUsecase(): counter.CreateCounterUsecase {
-    return new counter.CreateCounterUsecaseImpl(this.counterRepository);
+  getCreateCounterUsecase(): CreateCounterUsecase {
+    return new CreateCounterUsecaseImpl(this.counterRepository);
   }
 
-  getDeleteCounterUsecase(): counter.DeleteCounterUsecase {
-    return new counter.DeleteCounterUsecaseImpl(this.counterRepository);
+  getDeleteCounterUsecase(): DeleteCounterUsecase {
+    return new DeleteCounterUsecaseImpl(this.counterRepository);
   }
 
-  getGetAllCountersUsecase(): counter.GetAllCountersUsecase {
-    return new counter.GetAllCountersUsecaseImpl(this.counterRepository);
+  getGetAllCountersUsecase(): GetAllCountersUsecase {
+    return new GetAllCountersUsecaseImpl(this.counterRepository);
   }
 
-  getIncrementCounterUsecase(): counter.IncrementCounterUsecase {
-    return new counter.IncrementCounterUsecaseImpl(this.counterRepository);
+  getIncrementCounterUsecase(): IncrementCounterUsecase {
+    return new IncrementCounterUsecaseImpl(this.counterRepository);
   }
 
-  getDecrementCounterUsecase(): counter.DecrementCounterUsecase {
-    return new counter.DecrementCounterUsecaseImpl(this.counterRepository);
+  getDecrementCounterUsecase(): DecrementCounterUsecase {
+    return new DecrementCounterUsecaseImpl(this.counterRepository);
   }
 
-  getUpdateIncrementCountUsecase(): counter.UpdateIncrementAmountUsecase {
-    return new counter.UpdateIncrementAmountUsecaseImpl(this.counterRepository);
+  getUpdateIncrementCountUsecase(): UpdateIncrementAmountUsecase {
+    return new UpdateIncrementAmountUsecaseImpl(this.counterRepository);
   }
 
-  getUpdateDecrementCountUsecase(): counter.UpdateDecrementAmountUsecase {
-    return new counter.UpdateDecrementAmountUsecaseImpl(this.counterRepository);
+  getUpdateDecrementCountUsecase(): UpdateDecrementAmountUsecase {
+    return new UpdateDecrementAmountUsecaseImpl(this.counterRepository);
   }
 
-  getAssignCounterLabelUsecase(): counter.AssignCounterLabelUsecase {
-    return new counter.AssignCounterLabelUsecaseImpl(this.counterRepository);
+  getAssignCounterLabelUsecase(): AssignCounterLabelUsecase {
+    return new AssignCounterLabelUsecaseImpl(this.counterRepository);
   }
 
-  getFilterCountersByLabelUsecase(): counter.FilterCountersByLabelUsecase {
-    return new counter.FilterCountersByLabelUsecaseImpl();
+  getFilterCountersByLabelUsecase(): FilterCountersByLabelUsecase {
+    return new FilterCountersByLabelUsecaseImpl();
   }
 }

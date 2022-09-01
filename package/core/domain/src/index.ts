@@ -1,1 +1,1 @@
-export * as counter from './counter';
+export * from './counter';

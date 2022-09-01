@@ -1,15 +1,15 @@
-import { counter } from '@peterpan/domain';
+import { Counter } from '@peterpan/domain';
 
 import './Counter.css';
 
 export interface CounterProps {
-  counter: counter.Counter;
+  counter: Counter;
   handleDecrementButtonClick: () => void;
   handleIncrementButtonClick: () => void;
   handleDeleteCounterButtonClick: () => void;
 }
 
-export const Counter = function CounterFuntionComponent({
+export const CounterCard = function CounterFuntionComponent({
   counter,
   handleDecrementButtonClick,
   handleIncrementButtonClick,

@@ -1,8 +1,8 @@
-import {counter} from '@peterpan/domain';
+import { Counter, CounterRepository } from '@peterpan/domain';
 
 import { LocalStorageService } from '../common/localStorageService.interface';
 
-export class CounterRepositoryImpl implements counter.CounterRepository {
+export class CounterRepositoryImpl implements CounterRepository {
   get counterIds(): string[] {
     const counterIds = JSON.parse(this.localStorageService.get('counter-ids'));
 
@@ -27,11 +27,11 @@ export class CounterRepositoryImpl implements counter.CounterRepository {
     }
   }
 
-  getCounter(counterId: string): counter.Counter {
+  getCounter(counterId: string): Counter {
     return JSON.parse(this.localStorageService.get(counterId));
   }
 
-  createCounter(counterInfo: counter.Counter): counter.Counter {
+  createCounter(counterInfo: Counter): Counter {
     this.localStorageService.set(counterInfo.id, JSON.stringify(counterInfo));
 
     this.addCounterId(counterInfo.id);
@@ -39,11 +39,11 @@ export class CounterRepositoryImpl implements counter.CounterRepository {
     return counterInfo;
   }
 
-  getAllCounters(): counter.Counter[] {
+  getAllCounters(): Counter[] {
     return this.counterIds.map((id) => this.getCounterById(id));
   }
 
-  updateCounter(counter: counter.Counter): void {
+  updateCounter(counter: Counter): void {
     this.localStorageService.set(counter.id, JSON.stringify(counter));
   }
 
@@ -57,7 +57,7 @@ export class CounterRepositoryImpl implements counter.CounterRepository {
     this.counterIds = [...this.counterIds, counterId];
   }
 
-  private getCounterById(counterId: string): counter.Counter {
+  private getCounterById(counterId: string): Counter {
     return JSON.parse(this.localStorageService.get(counterId));
   }
 }

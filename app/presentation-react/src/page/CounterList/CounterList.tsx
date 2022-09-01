@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import houseSample from '@peterpan/shared/asset/image/houseSample.jpg';
 
-import { Counter } from './Counter';
+import { CounterCard } from './CounterCard';
 import { useCounterList } from './useCounterList';
 
 import './CounterList.css';
@@ -53,7 +53,7 @@ export function CounterList() {
       <div className="scroll-box" ref={scrollBoxRef}>
         {counterList.length > 0 ? (
           counterList.map((counter) => (
-            <Counter
+            <CounterCard
               key={counter.id}
               counter={counter}
               handleDecrementButtonClick={() => handleDecrementCounter(counter)}

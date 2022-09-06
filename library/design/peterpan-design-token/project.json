@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "package/design/peterpan-design-system/src",
+  "sourceRoot": "library/design/peterpan-design-token/src",
   "projectType": "library",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/package/design/peterpan-design-system",
-        "main": "package/design/peterpan-design-system/src/index.ts",
-        "tsConfig": "package/design/peterpan-design-system/tsconfig.lib.json",
+        "outputPath": "dist/library/design/peterpan-design-token",
+        "main": "library/design/peterpan-design-token/src/index.ts",
+        "tsConfig": "library/design/peterpan-design-token/tsconfig.lib.json",
         "assets": [
-          "package/design/peterpan-design-system/*.md"
+          "library/design/peterpan-design-token/*.md"
         ]
       }
     },
@@ -24,17 +24,17 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "package/design/peterpan-design-system/**/*.ts"
+          "library/design/peterpan-design-token/**/*.ts"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/package/design/peterpan-design-system"
+        "coverage/library/design/peterpan-design-token"
       ],
       "options": {
-        "jestConfig": "package/design/peterpan-design-system/jest.config.ts",
+        "jestConfig": "library/design/peterpan-design-token/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -1,5 +1,5 @@
 {
-  "sourceRoot": "package/shared/asset/src",
+  "sourceRoot": "library/shared/asset/src",
   "projectType": "library",
   "tags": []
 }

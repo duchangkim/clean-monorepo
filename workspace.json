@@ -2,12 +2,12 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "design-peterpan-design-system": "package/design/peterpan-design-system",
-    "design-peterpan-design-token": "package/design/peterpan-design-token",
-    "presentation-react": "app/presentation-react",
-    "shared-asset": "package/shared/asset",
-    "shared-core-data": "package/shared/core/data",
-    "shared-core-di": "package/shared/core/di",
-    "shared-core-domain": "package/shared/core/domain"
+    "design-peterpan-design-system": "library/design/peterpan-design-system",
+    "design-peterpan-design-token": "library/design/peterpan-design-token",
+    "presentation-react": "application/presentation-react",
+    "shared-asset": "library/shared/asset",
+    "shared-core-data": "library/shared/core/data",
+    "shared-core-di": "library/shared/core/di",
+    "shared-core-domain": "library/shared/core/domain"
   }
 }

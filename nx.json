@@ -17,8 +17,8 @@
     }
   },
   "workspaceLayout": {
-    "appsDir": "app",
-    "libsDir": "package"
+    "appsDir": "application",
+    "libsDir": "library"
   },
   "implicitDependencies": {
     "package.json": {

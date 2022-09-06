@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app/presentation-react/src",
+  "sourceRoot": "application/presentation-react/src",
   "projectType": "application",
   "targets": {
     "lint": {
@@ -8,25 +8,25 @@
       "options": {
         "fix": true,
         "cache": true,
-        "eslintConfig": "app/presentation-react/.eslintrc.json",
-        "lintFilePatterns": ["app/presentation-react/**/*.ts", "app/presentation-react/**/*.tsx"]
+        "eslintConfig": "application/presentation-react/.eslintrc.json",
+        "lintFilePatterns": ["application/presentation-react/**/*.ts", "application/presentation-react/**/*.tsx"]
       }
     },
     "build": {
       "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "index": "app/presentation-react/public/index.html",
-        "main": "app/presentation-react/src/index.tsx",
-        "tsConfig": "app/presentation-react/tsconfig.json",
-        "outputPath": "app/presentation-react/dist",
-        "webpackConfig": "app/presentation-react/config/webpack.config.js",
+        "index": "application/presentation-react/public/index.html",
+        "main": "application/presentation-react/src/index.tsx",
+        "tsConfig": "application/presentation-react/tsconfig.json",
+        "outputPath": "application/presentation-react/dist",
+        "webpackConfig": "application/presentation-react/config/webpack.config.js",
         "maxWorkers": 8,
         "scripts": [],
         "buildLibsFromSource": true,
         "assets": [
           {
-            "input": "app/presentation-react/public/static",
+            "input": "application/presentation-react/public/static",
             "glob": "**/*",
             "output": "static"
           }

@@ -17,12 +17,12 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@peterpan/designSystem": ["package/design/peterpan-design-system/src/index.ts"],
-      "@peterpan/designToken": ["package/design/peterpan-design-token/src/index.ts"],
-      "@peterpan/shared-core-data": ["package/shared/core/data/src/index.ts"],
-      "@peterpan/shared-core-di": ["package/shared/core/di/src/index.ts"],
-      "@peterpan/shared-core-domain": ["package/shared/core/domain/src/index.ts"],
-      "@peterpan/shared/asset/*": ["package/shared/asset/src/*"]
+      "@peterpan/designSystem": ["library/design/peterpan-design-system/src/index.ts"],
+      "@peterpan/designToken": ["library/design/peterpan-design-token/src/index.ts"],
+      "@peterpan/shared-core-data": ["library/shared/core/data/src/index.ts"],
+      "@peterpan/shared-core-di": ["library/shared/core/di/src/index.ts"],
+      "@peterpan/shared-core-domain": ["library/shared/core/domain/src/index.ts"],
+      "@peterpan/shared/asset/*": ["library/shared/asset/src/*"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

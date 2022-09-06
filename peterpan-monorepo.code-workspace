@@ -6,23 +6,23 @@
     },
     {
       "name": "shared/asset",
-      "path": "package/shared/asset"
+      "path": "library/shared/asset"
     },
     {
       "name": "shared/core/domain",
-      "path": "package/shared/core/domain"
+      "path": "library/shared/core/domain"
     },
     {
       "name": "shared/core/data",
-      "path": "package/shared/core/data"
+      "path": "library/shared/core/data"
     },
     {
       "name": "shared/core/di",
-      "path": "package/shared/core/di"
+      "path": "library/shared/core/di"
     },
     {
-      "name": "app/reactExample",
-      "path": "app/presentation-react"
+      "name": "application/reactExample",
+      "path": "application/presentation-react"
     }
   ],
   "settings": {

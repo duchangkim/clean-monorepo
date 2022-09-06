@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]sx?$': 'ts-jest'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/package/design/peterpan-design-system'
+  coverageDirectory: '../../../coverage/library/design/peterpan-design-system'
 };

@@ -1,6 +1,6 @@
 {
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "package/shared/core/di/src",
+  "sourceRoot": "library/shared/core/domain/src",
   "projectType": "library",
   "prefix": "peterpan",
   "targets": {
@@ -9,10 +9,10 @@
       "options": {
         "fix": true,
         "cache": true,
-        "eslintConfig": "package/shared/core/di/.eslintrc.json",
-        "lintFilePatterns": ["package/shared/core/di/**/*.ts"]
+        "eslintConfig": "library/shared/core/domain/.eslintrc.json",
+        "lintFilePatterns": ["library/shared/core/domain/**/*.ts"]
       }
     }
   },
-  "tags": ["core:di"]
+  "tags": ["core:domain"]
 }

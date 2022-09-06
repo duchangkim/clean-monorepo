@@ -1,4 +1,4 @@
-import * as data from '@peterpan/shared-core-data';
+import * as data from '@peterpan/shared-core-repository';
 
 export * from './counter.factory';
 

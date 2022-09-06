@@ -13,8 +13,8 @@
       "path": "library/shared/core/domain"
     },
     {
-      "name": "shared/core/data",
-      "path": "library/shared/core/data"
+      "name": "shared/core/repository",
+      "path": "library/shared/core/repository"
     },
     {
       "name": "shared/core/di",

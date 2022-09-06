@@ -19,9 +19,9 @@
     "paths": {
       "@peterpan/designSystem": ["library/design/peterpan-design-system/src/index.ts"],
       "@peterpan/designToken": ["library/design/peterpan-design-token/src/index.ts"],
-      "@peterpan/shared-core-data": ["library/shared/core/data/src/index.ts"],
       "@peterpan/shared-core-di": ["library/shared/core/di/src/index.ts"],
       "@peterpan/shared-core-domain": ["library/shared/core/domain/src/index.ts"],
+      "@peterpan/shared-core-repository": ["library/shared/core/repository/src/index.ts"],
       "@peterpan/shared/asset/*": ["library/shared/asset/src/*"]
     }
   },

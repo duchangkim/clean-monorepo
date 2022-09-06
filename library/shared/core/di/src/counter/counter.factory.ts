@@ -1,4 +1,4 @@
-import { CounterRepositoryImpl, LocalStorageService } from '@peterpan/shared-core-data';
+import { CounterRepositoryImpl, LocalStorageService } from '@peterpan/shared-core-repository';
 import {
   AssignCounterLabelUsecase,
   AssignCounterLabelUsecaseImpl,

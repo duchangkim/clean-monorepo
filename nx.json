@@ -29,5 +29,12 @@
   },
   "cli": {
     "packageManager": "npm"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    }
   }
 }

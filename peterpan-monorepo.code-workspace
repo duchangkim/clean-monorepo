@@ -23,10 +23,14 @@
     {
       "name": "application/reactExample",
       "path": "application/presentation-react"
+    },
+    {
+      "name": "library/reactExample",
+      "path": "library/react-example"
     }
   ],
   "settings": {
     "typescript.preferences.importModuleSpecifier": "project-relative",
-    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single"
   }
 }

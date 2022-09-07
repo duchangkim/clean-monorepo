@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "library/react-example/feature/counter-list/src",
+  "projectType": "library",
+  "tags": ["type:feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["library/react-example/feature/counter-list/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/library/react-example/feature/counter-list"],
+      "options": {
+        "jestConfig": "library/react-example/feature/counter-list/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

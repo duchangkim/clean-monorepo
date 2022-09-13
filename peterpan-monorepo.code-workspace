@@ -21,16 +21,17 @@
       "path": "library/shared/core/di"
     },
     {
-      "name": "application/reactExample",
-      "path": "application/presentation-react"
+      "name": "application/react-example",
+      "path": "application/react-example"
     },
     {
-      "name": "library/reactExample",
+      "name": "library/react-example",
       "path": "library/react-example"
     }
   ],
   "settings": {
     "typescript.preferences.importModuleSpecifier": "project-relative",
-    "typescript.preferences.quoteStyle": "single"
+    "typescript.preferences.quoteStyle": "single",
+    "liveServer.settings.multiRootWorkspaceName": "root"
   }
 }

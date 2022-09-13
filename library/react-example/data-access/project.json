@@ -3,16 +3,6 @@
   "sourceRoot": "library/react-example/data-access/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/library/react-example/data-access",
-        "main": "library/react-example/data-access/src/index.ts",
-        "tsConfig": "library/react-example/data-access/tsconfig.lib.json",
-        "assets": ["library/react-example/data-access/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

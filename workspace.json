@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "presentation-react": "application/presentation-react",
+    "react-example": "application/react-example",
     "react-example-constant": "library/react-example/constant",
     "react-example-data-access": "library/react-example/data-access",
     "react-example-feature-counter-list": "library/react-example/feature/counter-list",

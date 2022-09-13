@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "application/presentation-react/src",
+  "sourceRoot": "application/react-example/src",
   "projectType": "application",
   "targets": {
     "lint": {
@@ -8,25 +8,25 @@
       "options": {
         "fix": true,
         "cache": true,
-        "eslintConfig": "application/presentation-react/.eslintrc.json",
-        "lintFilePatterns": ["application/presentation-react/**/*.ts", "application/presentation-react/**/*.tsx"]
+        "eslintConfig": "application/react-example/.eslintrc.json",
+        "lintFilePatterns": ["application/react-example/**/*.ts", "application/react-example/**/*.tsx"]
       }
     },
     "build": {
       "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "index": "application/presentation-react/public/index.html",
-        "main": "application/presentation-react/src/index.tsx",
-        "tsConfig": "application/presentation-react/tsconfig.json",
-        "outputPath": "application/presentation-react/dist",
-        "webpackConfig": "application/presentation-react/config/webpack.config.js",
+        "index": "application/react-example/public/index.html",
+        "main": "application/react-example/src/index.tsx",
+        "tsConfig": "application/react-example/tsconfig.json",
+        "outputPath": "dist/application/react-example",
+        "webpackConfig": "application/react-example/config/webpack.config.js",
         "maxWorkers": 8,
         "scripts": [],
         "buildLibsFromSource": true,
         "assets": [
           {
-            "input": "application/presentation-react/public/static",
+            "input": "application/react-example/public/static",
             "glob": "**/*",
             "output": "static"
           }
@@ -53,16 +53,16 @@
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "presentation-react:build",
+        "buildTarget": "react-example:build",
         "hmr": true,
         "port": 3000
       },
       "configurations": {
         "prod": {
-          "buildTarget": "presentation-react:build:prod"
+          "buildTarget": "react-example:build:prod"
         },
         "dev": {
-          "buildTarget": "presentation-react:build:dev"
+          "buildTarget": "react-example:build:dev"
         }
       },
       "defaultConfiguration": "development"

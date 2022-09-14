@@ -3,7 +3,7 @@ import { User } from '../entity/user.entity';
 import { UserRepository } from '../userRepository.interface';
 import { UpdateUserNameUseCase } from './interface/updateUserName';
 
-export class UpdateUserNameImpl implements UpdateUserNameUseCase {
+export class UpdateUserNameImplementation implements UpdateUserNameUseCase {
   private userRepository: UserRepository;
 
   constructor(userRepository: UserRepository) {

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": ".",
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -17,11 +17,14 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
+      "@peterpan/react-example-data-access-common": ["library/react-example/data-access/common/src/index.ts"],
       "@peterpan/react-example-ui-counter-card": ["library/react-example/ui/counter-card/src/index.ts"],
       "@peterpan/react-example/constant": ["library/react-example/constant/src/index.ts"],
-      "@peterpan/react-example/data-access": ["library/react-example/data-access/src/index.ts"],
+      "@peterpan/react-example/feature/auth": ["library/react-example/feature/auth/src/index.ts"],
       "@peterpan/react-example/feature/counter-list": ["library/react-example/feature/counter-list/src/index.ts"],
+      "@peterpan/react-example/feature/login": ["library/react-example/feature/login/src/index.ts"],
       "@peterpan/react-example/feature/start": ["library/react-example/feature/start/src/index.ts"],
+      "@peterpan/react-example/ui/login-form": ["library/react-example/ui/login-form/src/index.ts"],
       "@peterpan/shared-core-di": ["library/shared/core/di/src/index.ts"],
       "@peterpan/shared-core-domain": ["library/shared/core/domain/src/index.ts"],
       "@peterpan/shared-core-repository": ["library/shared/core/repository/src/index.ts"],

@@ -3,9 +3,6 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist", "build"],
   "compilerOptions": {
-    "outDir": "./build",
-    "jsx": "react-jsx",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "jsx": "react-jsx"
   }
 }

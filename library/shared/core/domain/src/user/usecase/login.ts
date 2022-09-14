@@ -3,7 +3,7 @@ import { User } from '../entity/user.entity';
 import { UserRepository } from '../userRepository.interface';
 import { LoginUseCase } from './interface/login';
 
-export class LoginUseCaseImpl implements LoginUseCase {
+export class LoginUseCaseImplementation implements LoginUseCase {
   private userRepository: UserRepository;
 
   constructor(userRepository: UserRepository) {

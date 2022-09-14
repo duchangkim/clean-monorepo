@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'react-example-data-access',
-  preset: '../../../jest.preset.js',
+  displayName: 'react-example-data-access-common',
+  preset: '../../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -11,5 +11,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/library/react-example/data-access',
+  coverageDirectory: '../../../../coverage/library/react-example/data-access/common',
 };

@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #282c34;
+  color: #eeeeee;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px;
+  border-radius: 4px;
+  background-color: #3d424c;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__input {
+    outline: none;
+  }
+
+  &__button {
+    height: 30px;
+  }
+}

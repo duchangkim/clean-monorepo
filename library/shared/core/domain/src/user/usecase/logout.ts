@@ -1,7 +1,7 @@
 import { UserRepository } from '../userRepository.interface';
 import { LogoutUseCase } from './interface/logout';
 
-export class LogoutUseCaseImpl implements LogoutUseCase {
+export class LogoutUseCaseImplementation implements LogoutUseCase {
   private userRepository: UserRepository;
 
   constructor(userRepository: UserRepository) {

@@ -8,7 +8,7 @@ import {
 } from '@peterpan/shared-core-domain';
 import * as di from '@peterpan/shared-core-di';
 import { COUNTER_IDENTIFIER } from '@peterpan/react-example/constant';
-import { LocalStorageServiceImpl } from '@peterpan/react-example/data-access';
+import { LocalStorageServiceImpl } from '@peterpan/react-example-data-access-common';
 
 const localStorageServiceImpl = new LocalStorageServiceImpl();
 const counterFactory = new di.CounterFactory(localStorageServiceImpl);

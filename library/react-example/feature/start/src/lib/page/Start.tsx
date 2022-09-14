@@ -17,6 +17,9 @@ export const Start = function StartPageFunctionComponent() {
         <Link to="/counter" className="App-link">
           Couter example
         </Link>
+        <Link to="/login" className="App-link">
+          Login
+        </Link>
       </header>
     </div>
   );

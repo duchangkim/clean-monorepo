@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-export abstract class Usecase<T> {
+export abstract class UseCase<T> {
   abstract execute(...args: any[]): T;
 }

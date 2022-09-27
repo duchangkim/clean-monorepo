@@ -2,7 +2,7 @@ import { Routes as ReactRouterRoutes, Route, Navigate } from 'react-router-dom';
 
 import { CounterList } from '@peterpan/react-example/feature/counter-list';
 import { Start } from '@peterpan/react-example/feature/start';
-import { Login } from 'library/react-example/feature/login/src';
+import { Login } from '@peterpan/react-example/feature/login';
 
 function Routes() {
   return (

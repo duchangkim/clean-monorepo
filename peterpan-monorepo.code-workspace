@@ -5,6 +5,10 @@
       "path": "."
     },
     {
+      "name": "plugin",
+      "path": "library/plugin"
+    },
+    {
       "name": "shared/asset",
       "path": "library/shared/asset"
     },

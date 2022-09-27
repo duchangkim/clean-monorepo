@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "plugin": "library/plugin",
     "react-example": "application/react-example",
     "react-example-constant": "library/react-example/constant",
     "react-example-data-access-common": "library/react-example/data-access/common",

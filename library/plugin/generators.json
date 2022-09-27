@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "plugin",
+  "version": "0.0.1",
+  "generators": {
+    "shared-feature": {
+      "factory": "./src/generators/shared-feature/generator",
+      "schema": "./src/generators/shared-feature/schema.json",
+      "description": "shared-feature generator"
+    },
+    "shared-ui": {
+      "factory": "./src/generators/shared-ui/generator",
+      "schema": "./src/generators/shared-ui/schema.json",
+      "description": "shared-ui generator"
+    }
+  }
+}

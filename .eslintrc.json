@@ -25,11 +25,26 @@
     "class-methods-use-this": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
-    "import/no-unresolved": ["off", { "caseSensitive": false }],
-    "import/extensions": ["off", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never" }],
+    "import/no-unresolved": [
+      "off",
+      {
+        "caseSensitive": false
+      }
+    ],
+    "import/extensions": [
+      "off",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "prettier/prettier": "error",
     "no-shadow": "off",
-    "no-alert": "off"
+    "no-alert": "off",
+    "no-return-await": "off"
   },
   "overrides": [
     {
@@ -83,13 +98,23 @@
       "rules": {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        ],
         "react/react-in-jsx-scope": "off"
       }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
       "rules": {}
     }
   ]

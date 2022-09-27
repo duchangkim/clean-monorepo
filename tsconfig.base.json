@@ -17,7 +17,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@peterpan/plugin": ["library/plugin/src/index.ts"],
+      "@peterpan/plugin-workspace": ["library/plugin/workspace/src/index.ts"],
       "@peterpan/react-example-data-access-common": ["library/react-example/data-access/common/src/index.ts"],
       "@peterpan/react-example-ui-counter-card": ["library/react-example/ui/counter-card/src/index.ts"],
       "@peterpan/react-example/constant": ["library/react-example/constant/src/index.ts"],

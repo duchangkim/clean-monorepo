@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "plugin",
+  "version": "0.0.1",
+  "generators": {
+    "shared": {
+      "factory": "./src/generators/shared/generator",
+      "schema": "./src/generators/shared/schema.json",
+      "description": "shared library generator. 둘 이상의 프로젝트에서 사용되는 TS 라이브러리를 만들 때 사용합니다."
+    },
+    "library": {
+      "factory": "./src/generators/library/generator",
+      "schema": "./src/generators/library/schema.json",
+      "description": "library generator. 특정 프로젝트(application)에서 사용되는 TS 라이브러리를 만들 때 사용합니다."
+    }
+  }
+}

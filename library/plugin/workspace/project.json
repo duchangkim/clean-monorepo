@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "library/plugin/workspace/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/library/plugin/workspace",
+        "main": "library/plugin/workspace/src/index.ts",
+        "tsConfig": "library/plugin/workspace/tsconfig.lib.json",
+        "assets": [
+          "library/plugin/workspace/*.md",
+          {
+            "input": "./library/plugin/workspace/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./library/plugin/workspace/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./library/plugin/workspace",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./library/plugin/workspace",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "library/plugin/workspace/**/*.ts",
+          "library/plugin/workspace/generators.json",
+          "library/plugin/workspace/executors.json",
+          "library/plugin/workspace/package.json"
+        ],
+        "fix": true
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/library/plugin/workspace"],
+      "options": {
+        "jestConfig": "library/plugin/workspace/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

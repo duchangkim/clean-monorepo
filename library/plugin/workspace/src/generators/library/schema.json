@@ -7,24 +7,40 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "",
+      "description": "프로젝트(application)에서 사용될 라이브러리 이름",
       "$default": {
         "$source": "argv",
         "index": 0
       },
       "x-prompt": "What name would you like to use?"
     },
+    "projectName": {
+      "type": "string",
+      "alias": "project",
+      "description": "라이브러리가 포함될 프로젝트(application) 이름",
+      "x-dropdown": "projects"
+    },
+    "libraryType": {
+      "type": "string",
+      "description": "라이브러리 유형",
+      "alias": "l",
+      "x-prompt": {
+        "message": "라이브러리 유형",
+        "type": "list",
+        "items": [
+          { "value": "page", "label": "page" },
+          { "value": "feature", "label": "feature" },
+          { "value": "stateManagement", "label": "stateManagement" },
+          { "value": "ui", "label": "ui" },
+          { "value": "util", "label": "util" }
+        ]
+      }
+    },
     "tags": {
       "type": "string",
-      "description": "Add tags to the project (used for linting)",
+      "description": "libraryType과 관련해서 설정된 기본 tag 외 추가로 입력할 Tags",
       "alias": "t"
-    },
-    "directory": {
-      "type": "string",
-      "description": "A directory where the project is placed",
-      "alias": "d",
-      "default": "123"
     }
   },
-  "required": ["name"]
+  "required": ["name", "projectName"]
 }

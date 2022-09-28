@@ -14,12 +14,12 @@ import {
 import { lintProjectGenerator, Linter } from '@nrwl/linter';
 import { jestProjectGenerator } from '@nrwl/jest';
 import * as path from 'path';
-import { SharedFeatureGeneratorSchema } from './schema';
+import { SharedGeneratorSchema } from './schema';
 import { runTasksInSerial } from '../../utils/runTasksInSerial';
 import { getRelativePathToRootTsConfig } from '../../utils/typescript';
 import { PROJECT_TAG } from '../../projectTag';
 
-interface NormalizedSchema extends SharedFeatureGeneratorSchema {
+interface NormalizedSchema extends SharedGeneratorSchema {
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
@@ -32,21 +32,21 @@ function convertToCamelCase(string: string) {
   return names(string).propertyName;
 }
 
-function normalizeProjectDefaultTag(libraryType: string): PROJECT_TAG {
+function getProjectDefaultTag(libraryType: string): PROJECT_TAG {
   return PROJECT_TAG[libraryType];
 }
 
-function normalizeProjectDirectory(libraryType: string, name: string) {
+function getProjectDirectory(libraryType: string, name: string) {
   return joinPathFragments('shared', libraryType, name);
 }
 
-function normalizeOptions(tree: Tree, options: SharedFeatureGeneratorSchema): NormalizedSchema {
+function normalizeOptions(tree: Tree, options: SharedGeneratorSchema): NormalizedSchema {
   const { libraryType } = options;
 
-  const defaultTags = [normalizeProjectDefaultTag(libraryType)];
+  const defaultTags = [getProjectDefaultTag(libraryType)];
   const fileName = convertToCamelCase(options.name);
   const name = names(options.name).fileName;
-  const projectDirectory = normalizeProjectDirectory(libraryType, name);
+  const projectDirectory = getProjectDirectory(libraryType, name);
   const projectName = projectDirectory.replace(/\//g, '-');
   const projectRoot = `${getWorkspaceLayout(tree).libsDir}/${projectDirectory}`;
   const parsedTags = options.tags
@@ -136,7 +136,7 @@ function updateProjectEsLintConfiguration(tree: Tree, normalizedOptions: Normali
   updateProjectConfiguration(tree, normalizedOptions.projectName, projectConfiguration);
 }
 
-async function libraryGenerator(tree: Tree, options: SharedFeatureGeneratorSchema) {
+async function libraryGenerator(tree: Tree, options: SharedGeneratorSchema) {
   const tasks: GeneratorCallback[] = [];
   const normalizedOptions = normalizeOptions(tree, options);
 

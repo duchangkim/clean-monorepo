@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
-  "$id": "SharedFeature",
+  "$id": "Shared",
   "title": "",
   "type": "object",
   "properties": {
@@ -17,10 +17,10 @@
     },
     "libraryType": {
       "type": "string",
-      "description": "라이브러리 타입",
+      "description": "라이브러리 유형",
       "alias": "l",
       "x-prompt": {
-        "message": "라이브러리 타입",
+        "message": "라이브러리 유형",
         "type": "list",
         "items": [
           { "value": "feature", "label": "feature" },
